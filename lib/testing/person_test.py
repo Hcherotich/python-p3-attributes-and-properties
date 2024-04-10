@@ -7,10 +7,14 @@ import sys
 
 class TestPerson:
     '''Person in person.py'''
+    def __init__(self, name='', job=''):
+        self.name = name
+        self.job = job
+
 
     def test_is_class(self):
         '''is a class with the name "Person".'''
-        guido = Person(name='Guido', job='Sales')
+        guido = Person(name='Guido Van Rossum', job='Sales')
         assert(type(guido) == Person)
         
     def test_name_not_empty(self):
